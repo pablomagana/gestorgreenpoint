@@ -23,7 +23,7 @@
             .container {
                 text-align: center;
                 display: table-cell;
-                vertical-align: middle;
+                vertical-align: top;
             }
 
             .content {
@@ -31,40 +31,38 @@
                 display: inline-block;
             }
             .green{
-                font-weight: 900;
+                font-weight: 400;
                 color:#2b542c;
                 display: inline-block;
             }
             .point{
-                font-weight: 900;
+                font-weight: 400;
                 color:#5e5e5e;
                 display: inline-block;
             }
-            .incidenciaLink{
-                text-align: center;
-                font-weight: 400;
-                font-size: 50px;
-                color: #888a85;
-            }
-            .incidenciaLink:visited{
-                color: #888a85;
-            }
 
             .title {
-                font-size: 96px;
+                font-size: 20px;
             }
-
+            .listadoIncidencias{
+                width: 30%;
+                height: 100%;
+                background: #2b542c;
+            }
+            .detallesIncidencia{
+                width: 70%;
+                height: 100%;
+                background: #ff6666;
+            }
         </style>
     </head>
     <body>
         <div class="container">
             <div class="content">
                 <div class="title">Gestor de Incidencias de <div class="green">Green</div><div class="point">Pointer</div></div>
-                <div class="incidenciaLink"><a href="/panel/panel">Ir al panel de Incidencias</a></div>
             </div>
         </div>
-        <div class="listadoIncidencias"><p>asdsa</p></div>
-        <div class="detallesIncidencia"><p>asd</p></div>
-
+        <div class="listadoIncidencias"></div>
+        <div class="detallesIncidencia"></div>
     </body>
 </html>
