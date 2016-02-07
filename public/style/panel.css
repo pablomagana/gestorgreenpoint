@@ -1,0 +1,116 @@
+html, body {
+    height: 100px;
+    background: #f7ecb5;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: table;
+    font-weight: 100;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+.container {
+    max-height: 100px;
+    text-align: center;
+    /*display: table-cell;*/
+    vertical-align: top;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+.content {
+    text-align: center;
+    display: inline-block;
+}
+.green{
+    font-weight: 400;
+    color:#2b542c;
+    display: inline-block;
+}
+.point{
+    font-weight: 400;
+    color:#5e5e5e;
+    display: inline-block;
+}
+
+.title {
+    font-size: 20px;
+}
+.listadoIncidencias{
+    width: 450px;
+    min-height: 875px;
+    max-height: 875px;
+    background: #62EA9A;
+    float: left;
+    display: inline-block;
+    overflow-y:hidden;
+}
+.detallesIncidencia{
+    height: 875px;
+    padding-left: 500px;
+    /*float:right;
+    display: inline-block;*/
+    background: #bcf6d4;
+}
+.listadotituloincidencia{
+    /*float: left;*/
+}
+.incidenciaautor{
+    float: right;
+    padding-right: 10px;
+}
+.listadotituloincidencia,.cabeceraincidencia p
+{
+    display:inline-block ;
+}
+.incidenciadescripcion{
+    /*float: left;*/
+    min-width: 350px;
+    min-height: 50px;
+
+}
+li div{
+    padding-left:30px;
+    border-bottom: 3px solid #f7e1b5;
+}
+.seleccionalerta{
+    height: auto;
+    min-width: 400px;
+    min-height: 50px;
+    background: #bcf6d4;
+}
+.seleccionalerta,.incidenciadescripcion{
+
+}
+ul{
+    margin: 0px;
+    padding:0px;
+}
+li:hover{
+    cursor:pointer;
+}
+/**
+**
+*/
+.titulo,.nin,.estadoresuelta{
+    display: inline-block;
+    margin-right: 30px;
+}
+.btnresolver{
+    position:fixed;
+    top: 100px;
+    right:50px;
+    padding:7px;
+    background-color: #2ecc71;
+    box-shadow: 0px 5px 0px 0px #15B358;}
+
+.btnresolver:hover {
+    background-color: #48E68B;
+    cursor:pointer;
+}
+.btnresolver:active{
+    background-color: #128744;
+}

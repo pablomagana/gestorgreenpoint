@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use DB;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -16,7 +17,9 @@ class ControllerRestPanel extends Controller
      */
     public function index()
     {
-        return View('panel');
+        //cargar datos del incidencias
+        $incidencias = DB::select('select * from incidencias');
+        return View('panel',['incidencias' => $incidencias]);
     }
 
     /**
