@@ -46,7 +46,7 @@ body {
     background: #62EA9A;
     float: left;
     display: inline-block;
-    overflow-y:hidden;
+    overflow-y:auto;
 }
 .detallesIncidencia{
     height: 875px;

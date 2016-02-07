@@ -1,39 +1,57 @@
 @extends('layout.plantilla')
 
 @section('detalles')<!--modulo de detalles de incidencia-->
+<?php
+foreach ($incidencias as $incidencia) {
+    if($incidencia->id_alerta== $indice){
+        echo("
+            <div><h3 class='titulo'>Incidencia Nº&nbsp;&nbsp;</h3>
 
-<div><h3 class="titulo">Incidencia Nº&nbsp;&nbsp;</h3>
+            <p class='nin'>$incidencia->id_alerta</p>
 
-    <p class="nin">59</p>
+            <p class='estadoresuelta'>Resuelta : </p><h4 class='estadoresuelta'>
+            ");
+        if($incidencia->reparado==0){
+            echo("NO");
+        }else{
+            echo("SI");
+        }
+        echo("
+            </h4>
+            </div>
+            <div>
+            <h5>Usuario</h5>
 
-    <p class="estadoresuelta">Resuelta : </p><h4 class="estadoresuelta">NO</h4>
-</div>
-<div>
-    <h5>Usuario</h5>
-
-    <p>Pepet Woody</p>
-</div>
-<h2>Contenedor organico en llamas</h2>
-<p>Paseando por la calle pude fijarme en una pequeña luz muy tenue naranja que resplandecia crepitosamente arrojando
-    un olor bastante desagradable a plastico quemado.Llevada por la curiosidad, acabe de cruzar la esquina y
-    descubri que el contenedor donde siempre tiro mi basura ardia en llamas en la calle alcala</p>
-<img height="300px" src="https://yoyocronaldo7.files.wordpress.com/2008/07/homer-simpson-bum.jpg"
-     alt="Imagen de incidencia no disponible">
-<a class="btnresolver" ng-click="resolver()">Resolver Incidencia</a>
+            <p>$incidencia->email_usuario</p>
+            </div>
+            <h2>$incidencia->tipo</h2>
+            <p>$incidencia->descripcion</p>
+            <img height='300px' src='https://yoyocronaldo7.files.wordpress.com/2008/07/homer-simpson-bum.jpg'
+             alt='Imagen de incidencia no disponible'>
+             ");
+        if($incidencia->reparado==0){
+            echo("
+            <a class='btnresolver' onclick='window.location.href = \"../../panel/resolver/$incidencia->id_alerta\"'>Resolver Incidencia</a>
+        ");
+        }
+    }
+}
+?>
 
 @stop
 
 @section('listado')<!--modulo de listado de incidencias-->
 <?php
 foreach ($incidencias as $incidencia) {
-    if ($incidencia->id_alerta==2){
-       echo ("<li>
+    if ($incidencia->id_alerta == $indice) {
+        echo("<li>
                 <div class='seleccionalerta'>");
-    }else{
-        echo ("<li>
+    } else {
+        echo("<li onclick='window.location.href = \"../../panel/$incidencia->id_alerta\"'>
                 <div>");
     }
     echo("
+    <img src='../../img/alerticon.png' width='25px' height='25px'/>
      <h4 class='listadotituloincidencia'>$incidencia->tipo</h4>
      <p class='incidenciaautor'> $incidencia->email_usuario</p>
     <p class='incidenciadescripcion'>$incidencia->descripcion</p>

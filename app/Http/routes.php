@@ -19,7 +19,11 @@
 //Route::get('principal','ControllerPanel@visorPrincipal');
 
 //controladores recurso restfull
-Route::resource('panel','ControllerRestPanel');
+//Route::resource('panel','ControllerRestPanel');
+
+Route::get('panel/{indice}','ControllerRestPanel@incidencia');
+Route::get('panel','ControllerRestPanel@index');
+Route::get('panel/resolver/{indice}','ControllerRestPAnel@resolver');
 
 Route::get('/', function () {
     return view('welcome');

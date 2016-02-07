@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use DB;
 use App\Http\Requests;
+use App\incidencias;
 use App\Http\Controllers\Controller;
 
 class ControllerRestPanel extends Controller
@@ -18,8 +19,23 @@ class ControllerRestPanel extends Controller
     public function index()
     {
         //cargar datos del incidencias
-        $incidencias = DB::select('select * from incidencias');
-        return View('panel',['incidencias' => $incidencias]);
+        //$incidencias = DB::select('select * from incidencias');
+        $incidencias= incidencias::All();
+        $indice=0;
+        return View('panel',['incidencias' => $incidencias,'indice'=>$indice]);
+    }
+
+    public function incidencia($i){
+        //$incidencias= DB::select('select * from incidencias WHERE id_alerta='.$i);
+        $incidencias= incidencias::All();
+        $indice=$i;
+        return View('panel',['incidencias' => $incidencias,'indice'=>$indice]);
+    }
+
+    public function resolver($indice){
+        DB::update('update incidencias set reparado=true WHERE id_alerta='.$indice);
+        $incidencias= incidencias::All();
+        return View('panel',['incidencias' => $incidencias,'indice'=>$indice]);
     }
 
     /**
@@ -53,7 +69,7 @@ class ControllerRestPanel extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**
