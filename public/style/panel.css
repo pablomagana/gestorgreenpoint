@@ -1,6 +1,7 @@
 html, body {
     height: 100px;
-    background: #f7ecb5;
+    background: #8CDE8C;
+
 }
 
 body {
@@ -16,34 +17,39 @@ body {
     max-height: 100px;
     text-align: center;
     /*display: table-cell;*/
+
     vertical-align: top;
-    margin-bottom: 25px;
+    margin-bottom: 5px;
     margin-top: 25px;
+    box-shadow: 0px 5px 0px 0px #2ecc71;
 }
 
 .content {
     text-align: center;
     display: inline-block;
+
 }
 .green{
     font-weight: 400;
     color:#2b542c;
+    font-size: 40px;
     display: inline-block;
 }
 .point{
     font-weight: 400;
     color:#5e5e5e;
+    font-size: 40px;
     display: inline-block;
 }
 
 .title {
-    font-size: 20px;
+    font-size: 30px;
 }
 .listadoIncidencias{
     width: 450px;
     min-height: 875px;
     max-height: 875px;
-    background: #62EA9A;
+    background: #AAE282;
     float: left;
     display: inline-block;
     overflow-y:auto;
@@ -53,7 +59,7 @@ body {
     padding-left: 500px;
     /*float:right;
     display: inline-block;*/
-    background: #bcf6d4;
+    background: #8CDE8C
 }
 .listadotituloincidencia{
     /*float: left;*/
@@ -74,13 +80,13 @@ body {
 }
 li div{
     padding-left:30px;
-    border-bottom: 3px solid #f7e1b5;
+    border-bottom: 3px solid #2ecc71;
 }
 .seleccionalerta{
     height: auto;
     min-width: 400px;
     min-height: 50px;
-    background: #bcf6d4;
+    background: #8CDE8C;
 }
 .seleccionalerta,.incidenciadescripcion{
 
@@ -112,5 +118,5 @@ li:hover{
     cursor:pointer;
 }
 .btnresolver:active{
-    background-color: #128744;
+    background-color: #15B358;
 }
