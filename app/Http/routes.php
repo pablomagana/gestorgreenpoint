@@ -23,7 +23,7 @@
 
 Route::get('panel/{indice}','ControllerRestPanel@incidencia');
 Route::get('panel','ControllerRestPanel@index');
-Route::get('panel/resolver/{indice}','ControllerRestPAnel@resolver');
+Route::get('panelresolver/{indice}','ControllerRestPanel@resolver');
 
 Route::get('/', function () {
     return view('welcome');

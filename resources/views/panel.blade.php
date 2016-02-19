@@ -33,7 +33,7 @@ foreach ($incidencias as $incidencia) {
         echo '<img src="data:image/jpg;base64,' .$incidencia->imagen . '"  alt="imagen no disponible"/>';
         if($incidencia->reparado==0){
             echo("
-            <a class='btnresolver' onclick='window.location.href = \"../../panel/resolver/$incidencia->id_alerta\"'>Resolver Incidencia</a>
+            <a class='btnresolver' onclick='window.location.href = \"./panelresolver/$incidencia->id_alerta\"'>Resolver Incidencia</a>
         ");
         }
     }
@@ -49,11 +49,11 @@ foreach ($incidencias as $incidencia) {
         echo("<li>
                 <div class='seleccionalerta'>");
     } else {
-        echo("<li onclick='window.location.href = \"../../panel/$incidencia->id_alerta\"'>
+        echo("<li onclick='window.location.href = \"./panel/$incidencia->id_alerta\"'>
                 <div>");
     }
     echo("
-    <img src='../../img/alerticon.png' width='25px' height='25px'/>
+    <img src='./alerticon.png' class='imgincidencia' width='25px' height='25px'/>
      <h4 class='listadotituloincidencia'>$incidencia->tipo</h4>
      <p class='incidenciaautor'> $incidencia->email_usuario</p>
     <p class='incidenciadescripcion'>$incidencia->descripcion</p>

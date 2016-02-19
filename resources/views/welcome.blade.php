@@ -60,7 +60,7 @@
         <div class="container">
             <div class="content">
                 <div class="title">Gestor de Incidencias de <div class="green">Green</div><div class="point">Pointer</div></div>
-                <div class="incidenciaLink"><a href="/panel">Ir al panel de Incidencias</a></div>
+                <div class="incidenciaLink"><a href="./panel">Ir al panel de Incidencias</a></div>
             </div>
         </div>
     </body>

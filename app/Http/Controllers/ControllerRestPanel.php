@@ -33,9 +33,11 @@ class ControllerRestPanel extends Controller
     }
 
     public function resolver($indice){
+        echo("resolver incidencia antes update");
         DB::update('update incidencias set reparado=true WHERE id_alerta='.$indice);
+        echo("resolver incidencia despues update");
         $incidencias= incidencias::All();
-        return View('panel',['incidencias' => $incidencias,'indice'=>$indice]);
+        //return View('panel',['incidencias' => $incidencias,'indice'=>$indice]);
     }
 
     /**
