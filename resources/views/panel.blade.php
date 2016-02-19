@@ -21,14 +21,16 @@ foreach ($incidencias as $incidencia) {
             </div>
             <div>
             <h5>Usuario</h5>
-
             <p>$incidencia->email_usuario</p>
+
+            <p>$incidencia->fecha</p>
             </div>
             <h2>$incidencia->tipo</h2>
+            <p>$incidencia->dir_contenedor</p>
             <p>$incidencia->descripcion</p>
-            <img height='300px' src='https://yoyocronaldo7.files.wordpress.com/2008/07/homer-simpson-bum.jpg'
-             alt='Imagen de incidencia no disponible'>
              ");
+
+        echo '<img src="data:image/jpg;base64,' .$incidencia->imagen . '"  alt="imagen no disponible"/>';
         if($incidencia->reparado==0){
             echo("
             <a class='btnresolver' onclick='window.location.href = \"../../panel/resolver/$incidencia->id_alerta\"'>Resolver Incidencia</a>

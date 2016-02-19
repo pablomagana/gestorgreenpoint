@@ -26,8 +26,8 @@ class ControllerRestPanel extends Controller
     }
 
     public function incidencia($i){
-        //$incidencias= DB::select('select * from incidencias WHERE id_alerta='.$i);
-        $incidencias= incidencias::All();
+        $incidencias= DB::select('select * from incidencias ORDER by fecha ASC ');
+        //$incidencias= incidencias::All();
         $indice=$i;
         return View('panel',['incidencias' => $incidencias,'indice'=>$indice]);
     }

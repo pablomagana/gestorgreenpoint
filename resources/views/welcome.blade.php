@@ -63,8 +63,5 @@
                 <div class="incidenciaLink"><a href="/panel">Ir al panel de Incidencias</a></div>
             </div>
         </div>
-        <div class="listadoIncidencias"><p>asdsa</p></div>
-        <div class="detallesIncidencia"><p>asd</p></div>
-
     </body>
 </html>
